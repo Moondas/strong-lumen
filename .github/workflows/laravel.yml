@@ -20,7 +20,7 @@ jobs:
     - name: Generate key
       run: sed -i 's/^.*APP_KEY.*$/APP_KEY=test-key/' .env
     - name: Directory Permissions
-      run: chmod -R 777 storage bootstrap/cache
+      run: chmod -R 777 storage # bootstrap/cache
     - name: Create Database
       run: |
         mkdir -p database
